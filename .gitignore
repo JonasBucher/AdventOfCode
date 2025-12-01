@@ -1,0 +1,122 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pdb
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Package/build artifacts
+build/
+dist/
+.eggs/
+*.egg-info/
+
+# Coverage & testing
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.nox/
+.tox/
+
+# Type checking / analysis caches
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.dmypy.json
+.cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python project metadata
+.python-version
+Pipfile.lock
+poetry.lock
+
+# Logs & temps
+*.log
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swn
+
+# =========================
+# Visual Studio Code
+# Keep specific workspace configs; ignore the rest
+# =========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+# =========================
+# Visual Studio
+# =========================
+.vs/
+*.suo
+*.user
+*.userosscache
+*.rsuser
+*.sln.docstates
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug*/
+[Rr]elease*/
+[xX]64/
+[xX]86/
+
+# Test results
+[Tt]est[Rr]esults/
+*.trx
+
+# Profiling
+*.psess
+*.vsp
+*.vspx
+
+# NuGet packages
+*.nupkg
+
+# TFS
+$tf/
+
+# Database & local artifacts
+*.mdf
+*.ldf
+*.dbmdl
+
+# Cache & IntelliSense
+ipch/
+*.opensdf
+*.sdf
+*.cachefile
+*.VC.db
+*.VC.VC.opendb
+
+# =========================
+# OS / Editor miscellany
+# =========================
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# =========================
+# Misc / Other
+# =========================
+*.prof
+*.orig
