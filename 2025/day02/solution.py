@@ -2,7 +2,6 @@ def parse_input(raw: str):
     pairs = raw.strip().split(",")
     return [(int(pair.split("-")[0]), int(pair.split("-")[1])) for pair in pairs]
 
-
 def solve_part1(data):
     sum = 0
     
@@ -11,7 +10,6 @@ def solve_part1(data):
             sum += int(number_str)
 
     return sum
-
 
 def solve_part2(data):
     sum = 0

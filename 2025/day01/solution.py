@@ -7,15 +7,13 @@ def parse_input(raw: str):
         items.append({"direction": direction, "amount": int(amt_str)})
     return items
 
-
 def solve_part1(data):
-    return _run_moves(data, visit_each_step=False)
-
+    return run_moves(data, visit_each_step=False)
 
 def solve_part2(data):
-    return _run_moves(data, visit_each_step=True)
+    return run_moves(data, visit_each_step=True)
 
-def _run_moves(data, visit_each_step: bool):
+def run_moves(data, visit_each_step: bool):
     number_of_positions = 100
     start_position = 50
     position_visited = [0] * number_of_positions
