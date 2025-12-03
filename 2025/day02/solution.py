@@ -1,7 +1,6 @@
 from typing import Iterator
 from collections import Counter
 from math import gcd
-from functools import reduce
 
 def parse_input(raw: str):
     pairs = raw.strip().split(",")
@@ -36,7 +35,6 @@ def iter_pairs(data: list[tuple[int, int]]) -> Iterator[tuple[str, float]]:
                 yield number_str, len(number_str) / 2
 
 def has_valid_digit_frequencies(number_str: str) -> bool:
-    # counts = list(Counter(number_str).values())
     counts = count_digit_frequencies(number_str) # More efficient than Counter for this use case
     
     if 1 in counts:
@@ -45,7 +43,7 @@ def has_valid_digit_frequencies(number_str: str) -> bool:
     if len(counts) == 1:
         return True
     
-    return gcd(counts) > 1
+    return gcd(counts) > 1 # More efficient than using math.gcd on all counts
 
 def count_digit_frequencies(number_str: str) -> list[int]:
     freq = [0] * 10
