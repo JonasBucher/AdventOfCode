@@ -31,19 +31,13 @@ python main.py
 - Explicit day and part (year inferred):
 
 ```powershell
-python main.py 2 --part 2
-```
-
-- Explicit year (day inferred):
-
-```powershell
-python main.py --year 2025
+python main.py --day 2 --part 2
 ```
 
 - Use sample input:
 
 ```powershell
-python main.py 1 --sample --year 2025
+python main.py --year 2025 --day 1 --sample
 ```
 
 Notes:
