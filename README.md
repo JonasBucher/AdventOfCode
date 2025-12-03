@@ -1,46 +1,54 @@
-# AdventOfCode2025
+# Advent of Code Runner
 
-Project scaffold for the first 12 Advent of Code 2025 challenges in Python.
+This repo uses a strict year/day structure for solutions and inputs.
 
 ## Structure
 
+- `main.py`: CLI runner
+- `<year>/dayXX/`: solution folder for a given year and day
+	- `solution.py`: implementation with `parse_input`, `solve_part1`, `solve_part2`
+	- `input.txt`: puzzle input
+	- `sample.txt`: sample input (optional)
+
+Example:
+
 ```
-days/
-	day01/solution.py input.txt sample.txt
-	...
-	day12/solution.py input.txt sample.txt
-main.py
-.gitignore
+2025/
+	day01/
+		solution.py
+		input.txt
+		sample.txt
 ```
 
-Each `solution.py` defines:
+## Usage
 
-```python
-def parse_input(raw: str): ...
-def solve_part1(data): ...
-def solve_part2(data): ...
-```
-
-`input.txt` should contain your puzzle input (not committed until filled). `sample.txt` can hold the sample from the problem statement.
-
-## Running
-
-From the repository root:
+- Inferred year/day (UTC-5), run both parts:
 
 ```powershell
-python main.py 1            # Run Day 1 both parts with real input
-python main.py 1 --sample   # Run Day 1 using sample.txt
-python main.py 5 --part 2   # Run only Part 2 for Day 5
+python main.py
 ```
 
-## Adding Solutions
+- Explicit day and part (year inferred):
 
-Replace the `TODO` comments in each `solve_part1` / `solve_part2` with your implementation. Use `parse_input` to transform the raw text into convenient data structures.
+```powershell
+python main.py 2 --part 2
+```
 
-## Notes
+- Explicit year (day inferred):
 
-- Extend beyond Day 12 by copying an existing day directory and incrementing the number.
-- Consider adding tests (e.g. with `pytest`) for tricky parsing or logic.
-- Keep inputs private; avoid committing actual puzzle inputs if desired.
+```powershell
+python main.py --year 2025
+```
+
+- Use sample input:
+
+```powershell
+python main.py 1 --sample --year 2025
+```
+
+Notes:
+- Defaults use current date in UTC-5 (AoC timezone). If not December, default day is 1.
+- Runner only supports the strict structure `ROOT/<year>/dayXX/`.
+
 
 Happy coding!
