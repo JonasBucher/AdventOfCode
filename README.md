@@ -19,6 +19,11 @@ Example:
 		input.txt
 		sample.txt
 ```
+## Setup
+Install dependencies from `requirements.txt`:
+```powershell
+C:\repos\AdventOfCode2025\AdventOfCode2025\.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
 
 ## Usage
 
